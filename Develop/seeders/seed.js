@@ -1,6 +1,7 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 ///here is the database connection
+//How do include authorization?
 mongoose.connect("mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false

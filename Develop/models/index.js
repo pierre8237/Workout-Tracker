@@ -12,3 +12,5 @@
 module.exports = {
   Workout: require("./workout")
 };
+
+//*** seeds.js db = require("../models")
