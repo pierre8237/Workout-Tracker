@@ -7,7 +7,7 @@ fetch("/api/workouts/range")
   .then(data => {
     populateChart(data);
   });
-
+///API comes from api.js
 API.getWorkoutsInRange();
 
 function generatePalette() {
@@ -37,7 +37,6 @@ function populateChart(data) {
   let pounds = calculateTotalWeight(data);
   let workouts = workoutNames(data);
 
-  /////////THIS HAS TO BE CONSTRUCTED
   const colors = generatePalette();
 
   let line = document.querySelector("#canvas").getContext("2d");
