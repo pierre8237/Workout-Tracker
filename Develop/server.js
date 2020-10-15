@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-
+//morgan is for logging http requests
 const PORT = 3100;
 
 const app = express();

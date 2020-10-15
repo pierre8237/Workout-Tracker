@@ -1,5 +1,5 @@
 // get all workout data from back-end
-//How does the data get here?
+//How does the data get here? API in api.js? or routes/api.js?
 fetch("/api/workouts/range")
   .then(response => {
     return response.json();

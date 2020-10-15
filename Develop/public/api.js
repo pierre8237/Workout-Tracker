@@ -16,6 +16,7 @@ const API = {
   ///////////////////////////////////////////////////
 
   async addExercise(data) {
+    ///location.search is getting the value of the URL path after =
     const id = location.search.split("=")[1];
 
     const res = await fetch("/api/workouts/" + id, {

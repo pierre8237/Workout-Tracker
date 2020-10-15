@@ -3,7 +3,7 @@ const router = require("express").Router();
 const Workout = require("../models/workout.js");
 
 // your routes here
-
+// exporting router but it is not being invoked anywhere?
 module.exports = router;
 
 //Here are some end points I will need coming from api.js these are all async functions using fetch/await
