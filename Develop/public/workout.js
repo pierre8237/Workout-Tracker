@@ -3,7 +3,6 @@ async function initWorkout() {
   console.log("Last workout:", lastWorkout);
   if (lastWorkout) {
     document
-      //what is this? A href inside of a query select and an array inside of the href.
       .querySelector("a[href='/exercise?']")
       .setAttribute("href", `/exercise?id=${lastWorkout._id}`);
 
@@ -11,13 +10,12 @@ async function initWorkout() {
       date: formatDate(lastWorkout.day),
       totalDuration: lastWorkout.totalDuration,
       numExercises: lastWorkout.exercises.length,
-      //I have never seen a method spread + there is no key for this
       ...tallyExercises(lastWorkout.exercises)
     };
 
     renderWorkoutSummary(workoutSummary);
   } else {
-    renderNoWorkoutText();
+    renderNoWorkoutText()
   }
 }
 
@@ -31,8 +29,6 @@ function tallyExercises(exercises) {
       acc.totalDistance = (acc.totalDistance || 0) + curr.distance;
     }
     return acc;
-    ///Why is an empty object placed here?
-    //What can I do with it if it is part of a block function?
   }, {});
   return tallied;
 }
@@ -79,7 +75,7 @@ function renderNoWorkoutText() {
   const container = document.querySelector(".workout-stats");
   const p = document.createElement("p");
   const strong = document.createElement("strong");
-  strong.textContent = "You have not created a workout yet!";
+  strong.textContent = "You have not created a workout yet!"
 
   p.appendChild(strong);
   container.appendChild(p);
