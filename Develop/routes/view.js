@@ -10,7 +10,7 @@ router.get("/stats", (req, res) => {
 });
 
 ///////////////////////DO I need this?
-router.get("/index", (req, res) => {
+router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
